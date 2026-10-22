@@ -1,9 +1,8 @@
 # Private planner: stays on this computer only
 1 Organize/
 
-# Course folders (syllabus, slides, practice): on this computer only
-2 Create/Courses/*/*/
-2 Create/University terms/*/*/
+# Downloaded textbook copy (and my Xournal++ notes on it): on this computer only
+*vdoc.pub*
 
 # Standalone Excalidraw drawings (e.g. annotated slides): on this computer only
 3 System/Excalidraw/
