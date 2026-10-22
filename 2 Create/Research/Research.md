@@ -1,4 +1,4 @@
-# 🔎 Research
+DS# 🔎 Research
 
 Documentation and research on any topic I'm curious about — read, understand, then write it up in my own words.
 One note per topic (template: *Research*); a topic that grows gets its own folder, like [ML](<ML/ML.md>).
