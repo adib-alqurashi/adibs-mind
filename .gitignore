@@ -4,12 +4,6 @@
 # Downloaded textbook copy (and my Xournal++ notes on it): on this computer only
 *vdoc.pub*
 
-# Standalone Excalidraw drawings (e.g. annotated slides): on this computer only
-3 System/Excalidraw/
-
-# Annotated copies of course PDFs (contain the slides): on this computer only, wherever they live
-*[Aa]nnotated*
-
 # Obsidian per-device state
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
