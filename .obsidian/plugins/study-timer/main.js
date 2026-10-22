@@ -426,7 +426,20 @@ module.exports = class StudyTimerPlugin extends Plugin {
     this.registerEvent(this.app.vault.on("create", changed));
     this.registerEvent(this.app.vault.on("delete", changed));
     this.registerEvent(this.app.vault.on("rename", changed));
-    this.app.workspace.onLayoutReady(() => this.scan());
+    this.app.workspace.onLayoutReady(() => {
+      this.scan();
+      this.sweepSvgs();
+    });
+    // Keep Excalidraw's exported SVGs out of note folders: move them to the system folder.
+    this.svgFolder = "3 System/Excalidraw";
+    const svgChanged = (file) => {
+      if (file && /\.excalidraw\.svg$/i.test(file.path) && !file.path.startsWith(this.svgFolder + "/")) {
+        window.clearTimeout(this.svgTimer);
+        this.svgTimer = window.setTimeout(() => this.sweepSvgs(), 1500);
+      }
+    };
+    this.registerEvent(this.app.vault.on("create", svgChanged));
+    this.registerEvent(this.app.vault.on("modify", svgChanged));
     this.lastDay = dayKey(new Date());
 
     this.registerInterval(window.setInterval(() => this.tick(), 1000));
@@ -468,6 +481,29 @@ module.exports = class StudyTimerPlugin extends Plugin {
         : ln.replace(/\[ \]/, "[x]") + ` ✅ ${today}`;
       return lines.join("\n");
     });
+  }
+
+  async sweepSvgs() {
+    const vault = this.app.vault;
+    const files = vault.getFiles().filter(
+      (f) => /\.excalidraw\.svg$/i.test(f.path) && !f.path.startsWith(this.svgFolder + "/")
+    );
+    if (!files.length) return;
+    if (!vault.getAbstractFileByPath(this.svgFolder)) {
+      try { await vault.createFolder(this.svgFolder); } catch (e) { /* exists */ }
+    }
+    for (const f of files) {
+      try {
+        const text = await vault.read(f);
+        const target = `${this.svgFolder}/${f.name}`;
+        const existing = vault.getAbstractFileByPath(target);
+        if (existing) await vault.modify(existing, text);
+        else await vault.create(target, text);
+        await vault.delete(f);
+      } catch (e) {
+        console.error("Study Timer: could not move", f.path, e);
+      }
+    }
   }
 
   /* Write a new task line into the tasks note, under "## Tasks" or "## Deadlines", in date order. */
