@@ -1,7 +1,7 @@
 # 💻 Code
 
 Programming, problem solving and data science: things I build, document and illustrate.
-Full projects with runnable code live in [code-lab](https://github.com/adib-alqurashi/code-lab).
+shipped work and ideas can be find in [code-lab](https://github.com/adib-alqurashi/code-lab).
 
 | Folder | What goes there | Template |
 | --- | --- | --- |

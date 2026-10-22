@@ -1,0 +1,15 @@
+{
+  "lightStyle": "minimal-light",
+  "darkStyle": "minimal-dark-black",
+  "lightScheme": "minimal-default-light",
+  "darkScheme": "minimal-default-dark",
+  "tableWidth": "table-default-width",
+  "imgWidth": "img-default-width",
+  "fullWidthMedia": true,
+  "trimNames": true,
+  "underlineInternal": true,
+  "underlineExternal": true,
+  "folding": true,
+  "readableLineLength": false,
+  "minimalStatus": true
+}
