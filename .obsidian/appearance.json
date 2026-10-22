@@ -1,5 +1,11 @@
 {
   "theme": "obsidian",
-  "accentColor": "#2483ff",
-  "cssTheme": ""
+  "accentColor": "#d97757",
+  "cssTheme": "Minimal",
+  "enabledCssSnippets": [
+    "claude-look"
+  ],
+  "textFontFamily": "Source Serif 4",
+  "interfaceFontFamily": "Inter",
+  "monospaceFontFamily": "JetBrains Mono"
 }
