@@ -35,7 +35,7 @@ SORT date ASC
 | `Notes/` | Lecture notes, one per week or topic (template: *Lecture Note*) |
 | `Assignments/` | Homework, labs and my solutions |
 | `Exams/` | Summaries, past papers, practice |
-| `Materials/` | Slides, question banks, past papers — **on this computer only, not on GitHub** |
+| `Materials/` | Slides, question banks — **on this computer only, not on GitHub** |
 
 ```dataview
 TABLE file.folder AS "Folder", file.mtime AS "Edited"
