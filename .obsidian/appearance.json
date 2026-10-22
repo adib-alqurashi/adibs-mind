@@ -1,7 +1,7 @@
 {
   "theme": "obsidian",
   "accentColor": "#2483ff",
-  "cssTheme": "Minimal",
+  "cssTheme": "",
   "enabledCssSnippets": [
     "claude-look"
   ],
