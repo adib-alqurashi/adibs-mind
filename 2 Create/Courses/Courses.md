@@ -8,7 +8,7 @@ Each course folder has its **syllabus** plus `Slides/` and `Practice/`. The cour
 | --- | --- | --- |
 | [MATH 102](<261/MATH 102/Syllabus.pdf>) | Calculus II | ✅ |
 | [ICS 202](<261/ICS 202/Syllabus.pdf>) | Data Structures and Algorithms | ✅ |
-| [ICS 253](<261/ICS 253/Syllabus.pdf>) | Discrete Structures | ✅ |
+| [ICS 253](https://learn.zybooks.com/zybook/ICS253Fall2026) | Discrete Structures (zyBook) | [✅](<261/ICS 253/Syllabus.pdf>) |
 | DATA 211 | Data Science | — |
 | [ENGL 102](<261/ENGL 102/Syllabus.pdf>) | English | ✅ (schedule & deadlines) |
 
