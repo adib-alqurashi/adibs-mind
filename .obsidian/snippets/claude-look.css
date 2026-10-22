@@ -45,11 +45,11 @@ body {
   --line-height-normal: 1.65;
 }
 
-/* Warm, soft dark (not pure black), like Claude's dark mode */
+/* Dark grey like Claude's dark mode (#262624 background), not pure black */
 body.theme-dark,
 body.theme-dark.minimal-default-dark {
-  --base-h: 45;
-  --base-s: 4%;
+  --base-h: 60;
+  --base-s: 2%;
   --base-l: 15%;
 }
 
