@@ -29,9 +29,11 @@ hide task count
 ## 🎓 Courses
 | Course | How it's going | Next step |
 |---|---|---|
+| MATH 102 | | |
 | ICS 202 | | |
-| DATA 211 | | |
 | ICS 253 | | |
+| DATA 211 | | |
+| ENGL 102 | | |
 
 ## 🧠 Self-study
 - Covered:

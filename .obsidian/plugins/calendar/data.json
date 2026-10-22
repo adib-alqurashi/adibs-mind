@@ -1,0 +1,6 @@
+{
+  "shouldConfirmBeforeCreate": false,
+  "weekStart": "sunday",
+  "showWeeklyNote": false,
+  "wordsPerDot": 250
+}

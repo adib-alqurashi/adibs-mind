@@ -1,7 +1,17 @@
 # ➗ Math
 
-| Book / topic | Notes |
-| --- | --- |
-| [Calculus](<Calculus/Calculus.md>) | Larson & Edwards, *Calculus: Early Transcendental Functions* (7th ed.), CH01 – CH16 |
+Handwritten work and LaTeX, side by side: each problem can have a handwritten drawing (Excalidraw) and the clean LaTeX version.
 
-Add a new book or topic as its own folder here, e.g. `Linear Algebra/`, with a page of the same name.
+| Folder | What goes there |
+| --- | --- |
+| [Calculus](<Calculus/Calculus.md>) | Larson & Edwards, *Calculus: Early Transcendental Functions* (7th ed.), CH01 – CH16, one file per section |
+| `Problems/` | Problems just for fun, from anywhere, one note per problem |
+
+Template: *Math*. Add a new book or topic as its own folder, e.g. `Linear Algebra/`.
+
+## Fun problems
+```dataview
+TABLE topic AS "Topic", source AS "Source", date AS "Date"
+FROM "2 Create/Math/Problems"
+SORT date DESC
+```

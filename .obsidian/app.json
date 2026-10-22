@@ -1,5 +1,5 @@
 {
-  "attachmentFolderPath": "3 System/Attachments",
+  "attachmentFolderPath": "./Attachments",
   "newFileLocation": "current",
   "alwaysUpdateLinks": true,
   "useMarkdownLinks": true,

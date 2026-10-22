@@ -1,0 +1,7 @@
+{
+  "useFilenameAsScheduledDate": true,
+  "filenameAsScheduledDateFormat": "",
+  "filenameAsDateFolders": [
+    "1 Organize/Calendar/Daily"
+  ]
+}

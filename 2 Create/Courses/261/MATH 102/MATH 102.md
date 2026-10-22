@@ -26,7 +26,7 @@ hide task count
 ## Exams & deadlines
 ```dataview
 TABLE date AS "Date", kind AS "Type", file.link AS "Note"
-FROM "1 Organize/Calendar"
+FROM "1 Organize/Calendar/Deadlines"
 WHERE course = "MATH 102"
 SORT date ASC
 ```

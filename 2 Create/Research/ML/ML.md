@@ -6,7 +6,7 @@ One note per topic or per chapter of the course or book I'm following.
 ## Notes
 ```dataview
 TABLE file.folder AS "Folder", file.mtime AS "Edited"
-FROM "2 Create/ML"
+FROM "2 Create/Research/ML"
 WHERE file.name != "ML"
 SORT file.mtime DESC
 ```

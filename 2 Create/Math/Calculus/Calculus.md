@@ -23,7 +23,7 @@ Written in Markdown with LaTeX, so it renders on GitHub and in Obsidian: `$f'(x)
 | [CH16](<CH16 Additional Topics in Differential Equations/>) | Additional Topics in Differential Equations |
 
 ## How a section file looks
-Inside each chapter, one file per section, named by section number: `8.2.md`, `8.3.md` (template: *Math Section*).
+Inside each chapter, one file per section, named by section number: `8.2.md`, `8.3.md` (template: *Math*).
 Each problem is written as **Problem** (the statement), **Idea** (the key insight in one line),
 **Solution** (the full working) and **Takeaway** (what to remember next time).
 

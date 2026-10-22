@@ -2,8 +2,13 @@
   "calendarSources": [
     {
       "type": "local",
-      "directory": "1 Organize/Calendar",
+      "directory": "1 Organize/Calendar/Deadlines",
       "color": "#e0574f"
+    },
+    {
+      "type": "local",
+      "directory": "1 Organize/Calendar/Daily",
+      "color": "#2483ff"
     }
   ],
   "defaultCalendar": 0,
