@@ -6,6 +6,7 @@ term: 261
 # 📘 MATH 102 — Calculus II
 
 ## Info
+- 📄 [Syllabus](<Materials/Syllabus.pdf>) (opens in Obsidian)
 - Coordinator: Dr. Mohsen Alshahrani
 - Textbook: Larson & Edwards, *Calculus: Early Transcendental Functions*, 7th ed.
 - Grading (/300): Exam I 70 · Exam II 70 · Final 100 · Lab 30 · Class work 30
@@ -51,6 +52,7 @@ Worked problems by section live in [Calculus](<../../../Math/Calculus/Calculus.m
 | `Notes/` | Lecture notes, one per week or topic (template: *Lecture Note*) |
 | `Assignments/` | Homework, labs and my solutions |
 | `Exams/` | Summaries, past papers, practice |
+| `Materials/` | Slides, question banks, past papers, syllabus — **on this computer only, not on GitHub** |
 
 ```dataview
 TABLE file.folder AS "Folder", file.mtime AS "Edited"

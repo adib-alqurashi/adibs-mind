@@ -1,7 +1,9 @@
 # Adib's Mind
 
-My second brain: an [Obsidian](https://obsidian.md) vault for what I learn and make — KFUPM courses, mathematics, code and research.
-Everything is plain Markdown with LaTeX; handwritten work is drawn in Excalidraw and saved as SVG, so it all reads on GitHub as well as in Obsidian.
+My second brain: an [Obsidian](https://obsidian.md) vault for what I learn and make
+mathematics, code and research
+
+Everything is Markdown format, LaTeX and handwritten Excalidraw
 
 | Folder | What's inside |
 | --- | --- |

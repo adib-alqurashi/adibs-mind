@@ -1,6 +1,9 @@
 # Private planner: stays on this computer only
 1 Organize/
 
+# Course materials (slides, past papers, books): on this computer only
+**/Materials/
+
 # Obsidian per-device state
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
