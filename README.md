@@ -8,8 +8,8 @@ Everything is Markdown format, LaTeX and handwritten Excalidraw
 | Folder | What's inside |
 | --- | --- |
 | [University terms](<2 Create/University terms/261/>) | KFUPM courses by term (term codes, e.g. `261`): syllabus, slides and practice for each course |
-| [Math](<2 Create/Code & math/Math/Math.md>) | Handwritten work and LaTeX — [Calculus](<2 Create/Math/Calculus/Calculus.md>) (Larson & Edwards, 7th ed.) by section, plus problems just for fun |
-| [CODE & MATH](<2 Create/Code & math/CODE & MATH.md>) | [LeetCode](<2 Create/Code & math/programming/LeetCode/LeetCode.md>) write-ups, data science and programming notes · runnable projects live in [code-lab](https://github.com/adib-alqurashi/code-lab) |
+| [Math](<2 Create/programming & math/Math/Math.md>) | Handwritten work and LaTeX — [Calculus](<2 Create/Math/Calculus/Calculus.md>) (Larson & Edwards, 7th ed.) by section, plus problems just for fun |
+| [PROGRAMMING & MATH](<2 Create/programming & math/PROGRAMMING & MATH.md>) | [LeetCode](<2 Create/programming & math/programming/LeetCode/LeetCode.md>) write-ups, data science and programming notes · runnable projects live in [code-lab](https://github.com/adib-alqurashi/code-lab) |
 | [RESEARCH](<2 Create/TODO; MAKE IT NOT RESEARCH BUT ARTICALS S ARTICALS OR DOCUMENTATION OR WHAT EVER/RESEARCH.md>) | Write-ups on topics I research, including [ML](<2 Create/Research/ML/ML.md>) self-study |
 | [3 System](<3 System/>) | Templates and Excalidraw settings |
 
