@@ -175,3 +175,21 @@
 .pcal-time { font-variant-numeric: tabular-nums; color: var(--text-muted); font-size: 0.9em; }
 .pcal-text { flex: 1; }
 .pcal-range, .pcal-file { font-size: 0.75em; color: var(--text-faint); }
+
+.pcal-add {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0 8px;
+  flex-wrap: wrap;
+}
+.pcal-add-time { width: 96px; }
+.pcal-add-text { flex: 1; min-width: 160px; }
+.pcal-add-dl {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.85em;
+  color: var(--text-muted);
+  cursor: pointer;
+}

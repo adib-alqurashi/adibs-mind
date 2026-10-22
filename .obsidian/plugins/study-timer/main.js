@@ -143,7 +143,8 @@ function parseTasks(content, path) {
     const from = start || end;
     const to = end || start;
     const tags = (body.match(/#[\w/-]+/g) || []).map((t) => t.toLowerCase());
-    const kind = tags.includes("#deadline") ? "deadline" : tags.includes("#event") ? "event" : "task";
+    const isDeadlineFile = /(^|\/)Deadlines\.md$/i.test(path);
+    const kind = isDeadlineFile || tags.includes("#deadline") ? "deadline" : "task";
     let text = body
       .replace(/🔁[^📅⏳🛫✅➕⏫🔼🔽🔺⏬#]*/gu, "")
       .replace(new RegExp("[📅⏳🛫✅➕❌]\\s*" + DATE, "gu"), "")
@@ -191,6 +192,47 @@ function indexByDay(items) {
     );
   }
   return byDay;
+}
+
+function lineKey(ln) {
+  const d = (ln.match(new RegExp("📅\\s*" + DATE)) || ln.match(new RegExp("⏳\\s*" + DATE)) || [])[1] || "9999-99-99";
+  const t = (ln.match(/\] (\d{1,2}:\d{2}) /) || [])[1] || "99:99";
+  return d + " " + t.padStart(5, "0");
+}
+
+function insertTaskLine(data, line, section, date, time) {
+  const lines = data.replace(/\s+$/, "").split("\n");
+  const head = `## ${section}`.toLowerCase();
+  let h = lines.findIndex((l) => l.trim().toLowerCase() === head);
+  if (h === -1) {
+    lines.push("", `## ${section}`);
+    h = lines.length - 1;
+  }
+  let end = lines.length;
+  for (let i = h + 1; i < lines.length; i++) {
+    if (/^#{1,2} /.test(lines[i])) {
+      end = i;
+      break;
+    }
+  }
+  // drop empty placeholder checkboxes in this section
+  for (let i = end - 1; i > h; i--) {
+    if (/^\s*[-*+] \[ \]\s*$/.test(lines[i])) {
+      lines.splice(i, 1);
+      end--;
+    }
+  }
+  const key = date + " " + (time ? time.padStart(5, "0") : "99:99");
+  let pos = -1;
+  let lastTask = h;
+  for (let i = h + 1; i < end; i++) {
+    if (!TASK_RE.test(lines[i])) continue;
+    lastTask = i;
+    if (pos === -1 && lineKey(lines[i]) > key) pos = i;
+  }
+  if (pos === -1) pos = lastTask + 1;
+  lines.splice(pos, 0, line);
+  return lines.join("\n") + "\n";
 }
 
 function parseOptions(src) {
@@ -297,6 +339,39 @@ class CalendarView extends MarkdownRenderChild {
     ph.createSpan({ cls: "pcal-panel-title", text: `${label} · ${sel.getDate()} ${MONTHS[sel.getMonth()]}` });
     const smin = (this.selected === today ? p.stats().today : minutes[this.selected] || 0);
     if (smin >= 1) ph.createSpan({ cls: "pcal-mins", text: `studied ${fmtMinutes(smin)}` });
+    // Add a task to the selected day
+    const add = panel.createDiv({ cls: "pcal-add" });
+    const d0 = this.draft || (this.draft = { text: "", time: "", deadline: false, focus: false });
+    const timeIn = add.createEl("input", { type: "time", cls: "pcal-add-time" });
+    timeIn.value = d0.time;
+    const textIn = add.createEl("input", { type: "text", cls: "pcal-add-text" });
+    textIn.placeholder = `Add for ${WEEKDAYS[sel.getDay()]} ${sel.getDate()} ${MONTHS[sel.getMonth()].slice(0, 3)}…`;
+    textIn.value = d0.text;
+    const dlLabel = add.createEl("label", { cls: "pcal-add-dl" });
+    const dlBox = dlLabel.createEl("input", { type: "checkbox" });
+    dlBox.checked = d0.deadline;
+    dlLabel.appendText(" Deadline");
+    const addBtn = add.createEl("button", { text: "Add", cls: "mod-cta" });
+    timeIn.oninput = () => (d0.time = timeIn.value);
+    textIn.oninput = () => (d0.text = textIn.value);
+    textIn.onfocus = () => (d0.focus = true);
+    textIn.onblur = () => (d0.focus = false);
+    dlBox.onchange = () => (d0.deadline = dlBox.checked);
+    const submit = async () => {
+      const text = textIn.value.trim();
+      if (!text) return textIn.focus();
+      await p.addTask({ date: this.selected, time: timeIn.value, text, deadline: dlBox.checked, path: this.opts.tasks });
+      this.draft = { text: "", time: "", deadline: false, focus: true };
+    };
+    addBtn.onclick = submit;
+    textIn.onkeydown = (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        submit();
+      }
+    };
+    if (d0.focus) window.setTimeout(() => textIn.focus(), 0);
+
     const list = byDay[this.selected] || [];
     if (!list.length) panel.createDiv({ cls: "pcal-empty", text: "Nothing planned." });
     for (const it of list) {
@@ -395,6 +470,18 @@ module.exports = class StudyTimerPlugin extends Plugin {
     });
   }
 
+  /* Write a new task line into the tasks note, under "## Tasks" or "## Deadlines", in date order. */
+  async addTask({ date, time, text, deadline, path }) {
+    const target = path || "1 Organize/Tasks/Tasks.md";
+    const line = `- [ ] ${time ? time + " " : ""}${text.replace(/\s+/g, " ")}${deadline ? " #deadline" : ""} 📅 ${date}`;
+    let file = this.app.vault.getAbstractFileByPath(target);
+    if (!file) {
+      file = await this.app.vault.create(target, "# ✅ Tasks\n\n## Deadlines\n\n## Tasks\n");
+    }
+    await this.app.vault.process(file, (data) => insertTaskLine(data, line, deadline ? "Deadlines" : "Tasks", date, time));
+    new Notice(`Added to ${deadline ? "deadlines" : "tasks"}: ${text}`);
+  }
+
   async openTask(it) {
     const file = this.app.vault.getAbstractFileByPath(it.path);
     if (!file) return;
@@ -455,4 +542,4 @@ module.exports = class StudyTimerPlugin extends Plugin {
   }
 };
 
-module.exports.__test = { addSpan, computeStats, fmtMinutes, fmtClock, dayKey, parseTasks, indexByDay, parseOptions };
+module.exports.__test = { addSpan, computeStats, fmtMinutes, fmtClock, dayKey, parseTasks, indexByDay, parseOptions, insertTaskLine };
