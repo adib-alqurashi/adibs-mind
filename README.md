@@ -7,7 +7,7 @@ Everything is Markdown format, LaTeX and handwritten Excalidraw
 
 | Folder | What's inside |
 | --- | --- |
-| [Courses](<2 Create/Courses/Courses.md>) | KFUPM courses by term (term codes, e.g. `261`) |
+| University terms | KFUPM courses by term (term codes, e.g. `261`): syllabus, slides and practice — kept on my computer only |
 | [Math](<2 Create/Math/Math.md>) | Handwritten work and LaTeX — [Calculus](<2 Create/Math/Calculus/Calculus.md>) (Larson & Edwards, 7th ed.) by section, plus problems just for fun |
 | [Code](<2 Create/Code/Code.md>) | [LeetCode](<2 Create/Code/LeetCode/LeetCode.md>) write-ups, data science and programming notes · runnable projects live in [code-lab](https://github.com/adib-alqurashi/code-lab) |
 | [Research](<2 Create/Research/Research.md>) | Write-ups on topics I research, including [ML](<2 Create/Research/ML/ML.md>) self-study |
