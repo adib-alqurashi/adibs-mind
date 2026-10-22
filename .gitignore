@@ -5,6 +5,9 @@
 2 Create/Courses/*/*/
 2 Create/University terms/*/*/
 
+# Standalone Excalidraw drawings (e.g. annotated slides): on this computer only
+3 System/Excalidraw/
+
 # Obsidian per-device state
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
