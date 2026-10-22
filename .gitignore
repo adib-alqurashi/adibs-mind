@@ -1,8 +1,10 @@
 # Private planner: stays on this computer only
 1 Organize/
 
-# Course materials (slides, past papers, books): on this computer only
-**/Materials/
+# Course files (slides, practice, PDFs): on this computer only
+2 Create/Courses/**/Slides/
+2 Create/Courses/**/Practice/
+2 Create/Courses/**/*.pdf
 
 # Obsidian per-device state
 .obsidian/workspace.json

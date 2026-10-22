@@ -6,8 +6,20 @@ term: 261
 # 📘 DATA 211 — Data Science
 
 ## Info
-- Grading (Lec 1 slides): Homework 5% · Quizzes 10% · Project 20% (groups of 4–5) · Midterm 20% · Final 40% · Participation 5%
-- ⚠️ No DATA 211 syllabus in 01Academic — dates come from your plan
+- **Instructor:** Prof. Dr. Usman Qamar
+- **My section:** 
+- ⚠️ No syllabus file — info from the Lecture 1 slides (`Slides/Lec1_Intro.pdf`)
+- **Tools:** Python in Jupyter notebooks (Noteable)
+- **Covers:** Python basics (NumPy, Pandas, Matplotlib), basic statistics, data understanding & preparation, exploratory data analysis, linear regression, classification (Bayes, decision trees, k-NN), clustering (k-means, hierarchical). Databases, SQL & big data are **not** on the exam.
+
+| Assessment | Weight |
+| --- | --- |
+| Homework | 5% |
+| Quizzes | 10% |
+| Project (groups of 4 – 5) | 20% |
+| Midterm (conceptual + coding) | 20% |
+| Final (conceptual + coding) | 40% |
+| Participation | 5% |
 
 ## Open tasks
 ```tasks
@@ -30,18 +42,12 @@ SORT date ASC
 ```
 
 ## Files
-| Folder | What goes there |
+| Folder | What's in it |
 | --- | --- |
-| `Notes/` | Lecture notes, one per week or topic (template: *Lecture Note*) |
-| `Assignments/` | Homework, labs and my solutions |
-| `Exams/` | Summaries, past papers, practice |
-| `Materials/` | Slides, question banks — **on this computer only, not on GitHub** |
+| `Slides/` | Lecture slides |
+| `Practice/` | Question banks and practice material |
 
-```dataview
-TABLE file.folder AS "Folder", file.mtime AS "Edited"
-WHERE startswith(file.folder, this.file.folder + "/")
-SORT file.folder ASC, file.name ASC
-```
+Both folders stay on this computer only (not on GitHub).
 
 ## Questions to ask
 -

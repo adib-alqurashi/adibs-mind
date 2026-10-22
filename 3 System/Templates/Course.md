@@ -31,18 +31,12 @@ SORT date ASC
 ```
 
 ## Files
-| Folder | What goes there |
+| Folder | What's in it |
 | --- | --- |
-| `Notes/` | Lecture notes, one per week or topic (template: *Lecture Note*) |
-| `Assignments/` | Homework, labs and my solutions |
-| `Exams/` | Summaries, past papers, practice |
-| `Materials/` | Slides, question banks, syllabus — **on this computer only, not on GitHub** |
+| `Slides/` | Lecture slides |
+| `Practice/` | Question banks and practice material |
 
-```dataview
-TABLE file.folder AS "Folder", file.mtime AS "Edited"
-WHERE startswith(file.folder, this.file.folder + "/")
-SORT file.folder ASC, file.name ASC
-```
+Both folders stay on this computer only (not on GitHub).
 
 ## Questions to ask
 -
