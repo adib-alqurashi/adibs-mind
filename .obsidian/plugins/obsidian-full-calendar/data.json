@@ -1,0 +1,17 @@
+{
+  "calendarSources": [
+    {
+      "type": "local",
+      "directory": "1 Organize/Calendar",
+      "color": "#e0574f"
+    }
+  ],
+  "defaultCalendar": 0,
+  "firstDay": 0,
+  "initialView": {
+    "desktop": "dayGridMonth",
+    "mobile": "timeGrid3Days"
+  },
+  "timeFormat24h": false,
+  "clickToCreateEventFromMonthView": true
+}
