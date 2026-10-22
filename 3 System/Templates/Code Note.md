@@ -9,14 +9,8 @@ tags: [code]
 One or two lines: what this is and why it matters.
 
 ## Code
-```python
+```java
 
-```
-
-## How it works
-```mermaid
-flowchart LR
-    A[Input] --> B[Step] --> C[Output]
 ```
 
 ## Results

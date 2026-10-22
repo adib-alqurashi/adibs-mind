@@ -9,7 +9,7 @@ Handwritten work and LaTeX, side by side: each problem can have a handwritten dr
 
 Template: *Math*. Add a new book or topic as its own folder, e.g. `Linear Algebra/`.
 
-## Fun problems
+##  notes
 ```dataview
 TABLE topic AS "Topic", source AS "Source", date AS "Date"
 FROM "2 Create/Math/Problems"

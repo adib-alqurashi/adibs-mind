@@ -16,7 +16,7 @@ The answer in three lines, once I know it.
 
 
 ## Illustration
-<!-- Excalidraw drawing or a ```mermaid``` diagram -->
+<!-- Excalidraw drawing -->
 
 ## Sources
 1. 

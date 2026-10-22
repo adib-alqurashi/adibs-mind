@@ -5,7 +5,7 @@ shipped work and ideas can be find in [code-lab](https://github.com/adib-alquras
 
 | Folder | What goes there | Template |
 | --- | --- | --- |
-| [LeetCode](<LeetCode/LeetCode.md>) | One note per problem: idea, solution, complexity, takeaway | LeetCode |
+| [LeetCode](<programming/LeetCode/LeetCode.md>) | One note per problem: idea, solution, complexity, takeaway | LeetCode |
 | `Data Science/` | Analyses, models, Kaggle write-ups, with plots and results | Code Note |
 | `Notes/` | Concepts, languages, algorithms — explained with code and diagrams | Code Note |
 
