@@ -1,0 +1,9 @@
+{
+  "id": "study-timer",
+  "name": "Study Timer",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "One start/stop study timer with today, streak, this week, total and best day.",
+  "author": "adib-alqurashi",
+  "isDesktopOnly": false
+}

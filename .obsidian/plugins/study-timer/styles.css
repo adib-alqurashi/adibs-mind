@@ -1,0 +1,62 @@
+.study-timer {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 8px 0 16px;
+  background: var(--background-secondary);
+}
+.study-timer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.study-timer-clock {
+  font-size: 2.2em;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+.study-timer-btn {
+  min-width: 96px;
+  font-size: 1em;
+  padding: 6px 18px;
+  cursor: pointer;
+}
+.study-timer-btn.is-running {
+  background: var(--color-red);
+  color: var(--text-on-accent);
+}
+.study-timer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+  gap: 8px;
+}
+.study-timer-card {
+  background: var(--background-primary);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+.study-timer-value {
+  font-size: 1.3em;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.study-timer-label {
+  font-size: 0.8em;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+.study-timer-sub {
+  font-size: 0.7em;
+  color: var(--text-faint);
+}
+.study-timer-sub:empty {
+  display: none;
+}
+.study-timer-bar {
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+}

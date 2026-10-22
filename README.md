@@ -8,18 +8,16 @@ Everything is Markdown format, LaTeX and handwritten Excalidraw
 | Folder | What's inside |
 | --- | --- |
 | [University terms](<2 Create/University terms/261/>) | KFUPM courses by term (term codes, e.g. `261`): syllabus, slides and practice for each course |
-| [Math](<2 Create/programming & math/Math/Math.md>) | Handwritten work and LaTeX — [Calculus](<2 Create/Math/Calculus/Calculus.md>) (Larson & Edwards, 7th ed.) by section, plus problems just for fun |
-| [PROGRAMMING & MATH](<2 Create/programming & math/PROGRAMMING & MATH.md>) | [LeetCode](<2 Create/programming & math/programming/LeetCode/LeetCode.md>) write-ups, data science and programming notes · runnable projects live in [code-lab](https://github.com/adib-alqurashi/code-lab) |
-| [RESEARCH](<2 Create/TODO; MAKE IT NOT RESEARCH BUT ARTICALS S ARTICALS OR DOCUMENTATION OR WHAT EVER/RESEARCH.md>) | Write-ups on topics I research, including [ML](<2 Create/Research/ML/ML.md>) self-study |
-| [3 System](<3 System/>) | Templates and Excalidraw settings |
+| [Programming & Math](<2 Create/programming & math/PROGRAMMING & MATH.md>) | Maths and code together: [LeetCode](<2 Create/programming & math/programming/LeetCode/LeetCode.md>), maths problems (handwriting + LaTeX), programming notes · shipped work in [code-lab](https://github.com/adib-alqurashi/code-lab) |
+| [Articles](<2 Create/Articles/Articles.md>) | Articles and documentation on topics I explore |
+| [3 System](<3 System/>) | Templates (Article, Problem, Note) |
 
-`1 Organize` (calendar, to-do lists, habit tracker, daily notes) is my private planner. It lives in the same vault on my computer but is not part of this repository.
+`1 Organize` (planner, tasks and study timer) is my private planner. It lives in the same vault on my computer but is not part of this repository.
 
 ## Conventions
-- **Math:** each problem as **Problem → Handwritten → Idea → Solution → Takeaway**; book problems one file per section (`8.2.md`).
-- **LeetCode:** one note per problem (`0001 Two Sum.md`) with difficulty, pattern, idea, solution, complexity and takeaway.
-- **Research:** one note per topic with a status: idea → researching → writing → done.
+- **Problems** (maths or code): Problem → Idea → Solution → Takeaway, with handwriting, LaTeX or code in the solution.
+- **Articles:** one note per article, with a date and a one-line summary.
 - Images and drawings sit in an `Attachments/` folder next to the note that uses them.
 
 ## Opening it in Obsidian
-Clone the repo and open the folder as a vault. Community plugins: Dataview, Tasks, Full Calendar, Calendar, Habit Tracker 21, Excalidraw, LaTeX Suite, Git.
+Clone the repo and open the folder as a vault. Community plugins: Dataview, Tasks, Excalidraw, LaTeX Suite, PDF++, Git, Minimal Theme Settings, plus my own small Study Timer. Theme: Minimal.

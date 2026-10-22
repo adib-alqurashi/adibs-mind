@@ -4,7 +4,8 @@
 # Downloaded textbook copy (and my Xournal++ notes on it): on this computer only
 *vdoc.pub*
 
-# Obsidian per-device state
+# Obsidian per-device state (and my study-timer history)
+.obsidian/plugins/study-timer/data.json
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 .obsidian/cache
