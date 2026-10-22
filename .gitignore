@@ -3,6 +3,7 @@
 
 # Course folders (syllabus, slides, practice): on this computer only
 2 Create/Courses/*/*/
+2 Create/University terms/*/*/
 
 # Obsidian per-device state
 .obsidian/workspace.json
