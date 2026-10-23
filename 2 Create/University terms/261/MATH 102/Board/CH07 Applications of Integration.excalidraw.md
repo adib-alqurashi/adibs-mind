@@ -12,18 +12,17 @@ tags: [excalidraw]
 ## Text Elements
 %%
 ## Drawing
-```json
-{
-	"type": "excalidraw",
-	"version": 2,
-	"source": "https://github.com/zsviczian/obsidian-excalidraw-plugin",
-	"elements": [],
-	"appState": {
-		"gridSize": null,
-		"theme": "dark",
-		"viewBackgroundColor": "transparent"
-	},
-	"files": {}
-}
+```compressed-json
+N4KAkARALgngDgUwgLgAQQQDwMYEMA2AlgCYBOuA7hADTgQBuCpAzoQPYB2KqATLZMzYBXUtiRoIACyhQ4zZAHoFAc0JRJQgEYA6bGwC2CgF7N6hbEcK4OCtptbErHALRY8RMpWdx8Q1TdIEfARcZgRmBShcZQUebR4ATm0ABho6IIR9BA4oZm4AbQBdfghcODgAZSiocVRQMEh1TNqIYlxSAGs0hoZCBAoAIVxsDuVSYQ5iAGE2fDZSbggAYgQA
+
+DjW17shsEUCcgEka/SrxjoQZuYWJJYBGBDu7rYgd0j2oQ8yhkbGJ6dn5xZQcgcZhwdrZKBPF5vD76ABihHw+CqMGCi0EHihuwhsKq5g6MA4bBqJzYZwuAOuD3uSH422xByOpLOAHUSOoANIIGCLLKOIT6LGvHFMoFkhAANXaVk0iLUPIkehBURyQphotOCBRaIkGJIapFmQASsJlJIOOE8mgbnTngz3kcAPJg7Dy7g3ZLJW3Qw3wzhQOG4fSIhWo
+
+ACs3vtsLh/oqhCMtR4XvA9OFjMyABUsFAAIJEZRcCTBABmkMjaYdmSq7VzrzYFEkIWI3A4QiR5fVmQAopMc3WG03Fu1xlQO76+yOM/AWuMhJMDen4eQsiadahW+2UxBmNhxkiABrcAAsSe0YZ4ADZVjwjwkwzcbgB2G4JW07vf4ACa3AvNwAzNof7JBeYaPneqwJKsR5/qstpGGwBjcPUPT0AQQi1DcKYAL5jouJpzsQFrMFa6CzvOtpjCQcYJtw
+
+SYUaQVE1HA3ARlulHEAAsmwxAID2uCaMEzZoEC6H0SQFJXHUKaQAMsxCaRyiaLgAAUT6vqganUBpYFackZ4AJRbJARoIMobbtIspCKSpSZHlptn2ckdmoHpYaGdh3r/KQGZsHAAAK+IkchkAZFkOTMrUG74HSIXBGFUBfKMZHyVFMUQJoQgjAgAaIvgLZttF0nblA+IwAAcsSWpimc+Wbg0AglSM5WVYlPwEbV+AeVuxb+j5/mBR1uFQBFzolZwJ
+
+Gpd1y4ICZkxMIQHDKEhRXZPxgncCJCBpdgRDMcJpCiUVHBBrUm1pcIUBEBaG0HVtRX6O0ZykGVJ03Yd9UQA9nRMHxAkIPJm1dT0dgAFYINguQVMdcBcTxv3rWgxYEGEtrDCVjA+bMy0fbAiDohkEPsFw21CMwUAGFOeNoJNH1zFl8lI/gKNFcW4zHATY2FqgjPM7ToS5oTGMIXl1MFUDkCOMwa3nP62YcdkQjcDzd09LKkwLcofmBMWTDZGIiyrX
+
+9za2oQzAcSQcBsAtw3Q3AGvw/9b0q5AmhsJgFQc0TsMtEqUQLU8C1wEIUAACIIGY+sSLgwdsBA4A4XQxaIuESFYSAWFAA===
 ```
 %%

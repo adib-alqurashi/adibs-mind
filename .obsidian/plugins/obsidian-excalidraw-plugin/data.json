@@ -14,7 +14,7 @@
   "cropFolder": "",
   "annotateFolder": "",
   "embedUseExcalidrawFolder": false,
-  "templateFilePath": "3 System/Excalidraw/Template.excalidraw",
+  "templateFilePath": "3 System/Excalidraw/Template.excalidraw.md",
   "scriptFolderPath": "3 System/Excalidraw/Scripts",
   "allowJavaScriptFiles": false,
   "storeScriptFilesAsJavaScript": false,
