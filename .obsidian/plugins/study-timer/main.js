@@ -433,13 +433,44 @@ module.exports = class StudyTimerPlugin extends Plugin {
     // Keep Excalidraw's exported SVGs out of note folders: move them to the system folder.
     this.svgFolder = "3 System/Excalidraw";
     const svgChanged = (file) => {
-      if (file && /\.excalidraw\.svg$/i.test(file.path) && !file.path.startsWith(this.svgFolder + "/")) {
+      if (file && /\.svg$/i.test(file.path) && !file.path.startsWith(this.svgFolder + "/")) {
         window.clearTimeout(this.svgTimer);
         this.svgTimer = window.setTimeout(() => this.sweepSvgs(), 1500);
       }
     };
     this.registerEvent(this.app.vault.on("create", svgChanged));
     this.registerEvent(this.app.vault.on("modify", svgChanged));
+
+    // New drawings go next to the note you were working in.
+    this.lastNoteFolder = null;
+    this.registerEvent(
+      this.app.workspace.on("file-open", (f) => {
+        if (f && f.extension === "md" && !/\.excalidraw\.md$/i.test(f.path) && f.parent) {
+          this.lastNoteFolder = f.parent.path;
+        }
+      })
+    );
+    this.registerEvent(
+      this.app.vault.on("create", (f) => {
+        if (!this.ready || !f || !/^Drawing .*\.excalidraw\.md$/i.test(f.name)) return;
+        const folder = f.parent ? f.parent.path : "/";
+        const isDefault = folder === "/" || folder === "" || folder === this.svgFolder;
+        const target = this.lastNoteFolder;
+        if (!isDefault || !target || target === "/" || target.startsWith("3 System")) return;
+        window.setTimeout(async () => {
+          const still = this.app.vault.getAbstractFileByPath(f.path);
+          if (!still) return;
+          const dest = `${target}/${f.name}`;
+          if (this.app.vault.getAbstractFileByPath(dest)) return;
+          try {
+            await this.app.fileManager.renameFile(still, dest);
+          } catch (e) {
+            console.error("Study Timer: could not move drawing", e);
+          }
+        }, 800);
+      })
+    );
+    this.app.workspace.onLayoutReady(() => (this.ready = true));
     this.lastDay = dayKey(new Date());
 
     this.registerInterval(window.setInterval(() => this.tick(), 1000));
@@ -486,16 +517,19 @@ module.exports = class StudyTimerPlugin extends Plugin {
   async sweepSvgs() {
     const vault = this.app.vault;
     const files = vault.getFiles().filter(
-      (f) => /\.excalidraw\.svg$/i.test(f.path) && !f.path.startsWith(this.svgFolder + "/")
+      (f) => /\.svg$/i.test(f.path) && !f.path.startsWith(this.svgFolder + "/")
     );
     if (!files.length) return;
-    if (!vault.getAbstractFileByPath(this.svgFolder)) {
-      try { await vault.createFolder(this.svgFolder); } catch (e) { /* exists */ }
-    }
     for (const f of files) {
       try {
         const text = await vault.read(f);
-        const target = `${this.svgFolder}/${f.name}`;
+        if (!text.slice(0, 600).includes("svg-source:excalidraw")) continue; // only Excalidraw exports
+        // drawings from the private planner keep their SVG private too
+        const folder = f.path.startsWith("1 Organize/") ? `${this.svgFolder}/Private` : this.svgFolder;
+        if (!vault.getAbstractFileByPath(folder)) {
+          try { await vault.createFolder(folder); } catch (e) { /* exists */ }
+        }
+        const target = `${folder}/${f.name}`;
         const existing = vault.getAbstractFileByPath(target);
         if (existing) await vault.modify(existing, text);
         else await vault.create(target, text);

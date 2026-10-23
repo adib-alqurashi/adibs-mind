@@ -7,6 +7,7 @@
   "showUnsupportedFiles": true,
   "promptDelete": false,
   "userIgnoreFilters": [
-    "/\\.excalidraw\\.svg$/"
+    "/\\.excalidraw\\.svg$/",
+    "/^3 System\\/Excalidraw\\/.*\\.svg$/"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "id": "study-timer",
   "name": "Study Timer & Calendar",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "minAppVersion": "1.0.0",
   "description": "One start/stop study timer with today, streak, this week, total and best day, plus a month calendar of your dated tasks.",
   "author": "adib-alqurashi",

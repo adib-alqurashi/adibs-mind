@@ -4,8 +4,8 @@
 # Downloaded textbook copy (and my Xournal++ notes on it): on this computer only
 *vdoc.pub*
 
-# My Planner board (private)
-3 System/Excalidraw/Board.excalidraw*
+# SVGs of drawings in my private planner
+3 System/Excalidraw/Private/
 
 # Obsidian per-device state (and my study-timer history)
 .obsidian/plugins/study-timer/data.json
