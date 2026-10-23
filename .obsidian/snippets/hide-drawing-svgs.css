@@ -1,0 +1,2 @@
+/* One drawing = one item: hide the SVG pictures Excalidraw makes (they still exist for GitHub). */
+.nav-file:has(> .nav-file-title[data-path$=".excalidraw.svg"]) { display: none; }

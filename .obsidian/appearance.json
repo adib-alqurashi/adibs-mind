@@ -3,7 +3,8 @@
   "accentColor": "#2483ff",
   "cssTheme": "",
   "enabledCssSnippets": [
-    "claude-look"
+    "claude-look",
+    "hide-drawing-svgs"
   ],
   "textFontFamily": "Source Serif 4",
   "interfaceFontFamily": "Inter",
