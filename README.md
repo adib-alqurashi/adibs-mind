@@ -1,23 +1,29 @@
 # Adib's Mind
 
-My second brain: an [Obsidian](https://obsidian.md) vault for what I learn and make
-mathematics, code and research
+> A second brain for mathematics, code and machine learning, built in Obsidian and partly written by hand.
 
-Everything is Markdown format, LaTeX and handwritten Excalidraw
+This is where my learning lives: university courses, problems I've worked through, things I've built, and ideas I'm still chasing. Everything is plain Markdown, LaTeX and handwritten Excalidraw, so it stays readable anywhere and lasts.
 
-| Folder | What's inside |
-| --- | --- |
-| [University terms](<2 Create/University terms/261/>) | KFUPM courses by term (term codes, e.g. `261`): syllabus, slides and practice for each course |
-| [Programming & Math](<2 Create/programming & math/PROGRAMMING & MATH.md>) | Maths and code together: [LeetCode](<2 Create/programming & math/programming/LeetCode/LeetCode.md>), maths problems (handwriting + LaTeX), programming notes · shipped work in [code-lab](https://github.com/adib-alqurashi/code-lab) |
-| [Articles](<2 Create/Articles/Articles.md>) | Articles and documentation on topics I explore |
-| [3 System](<3 System/>) | Templates (Article, Problem, Note) |
+## What's inside
 
-`1 Organize` (planner, tasks and study timer) is my private planner. It lives in the same vault on my computer but is not part of this repository.
+| | |
+|---|---|
+| [**University terms**](...) | KFUPM courses by term (e.g. `261`): syllabus, slides and practice |
+| [**Programming & Math**](...) | Where maths meets code: [LeetCode](...), worked problems in handwriting and LaTeX, programming notes, and shipped projects in [code-lab](...) |
+| [**Articles**](...) | Deep dives on topics I'm exploring |
+| [**3 System**](...) | The templates that keep it all consistent |
 
-## Conventions
-- **Problems** (maths or code): Problem → Idea → Solution → Takeaway, with handwriting, LaTeX or code in the solution.
-- **Articles:** one note per article, with a date and a one-line summary.
-- Images and drawings sit in an `Attachments/` folder next to the note that uses them.
+My planner (tasks, schedule and study timer) lives in `1 Organize`. It's in the same vault on my machine, but stays private.
 
-## Opening it in Obsidian
-Clone the repo and open the folder as a vault. Community plugins: Dataview, Tasks, Excalidraw, LaTeX Suite, PDF++, Git, Minimal Theme Settings, plus my own small Study Timer. Theme: Minimal.
+## How notes are written
+
+- **Problems** follow one path: Problem → Idea → Solution → Takeaway. The solution is handwritten, LaTeX or code, whichever fits.
+- **Articles** get one note each, dated, with a one-line summary at the top.
+- **Images and drawings** sit in an `Attachments/` folder beside the note that uses them.
+
+## Open it yourself
+
+Clone the repo and open the folder as an Obsidian vault.
+
+**Theme:** Minimal
+**Plugins:** Dataview, Tasks, Excalidraw, LaTeX Suite, PDF++, Git, Minimal Theme Settings, plus Study Timer, a small plugin I wrote.
