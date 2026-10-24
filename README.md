@@ -23,7 +23,3 @@ My planner (tasks, schedule and study time) lives in the same vault on my machin
 ## Elsewhere
 
 The things I build with this knowledge live in [code-lab](https://github.com/adib-alqurashi/code-lab), and the small tools I build for the vault itself, like the study timer in the status bar, live in [prototypes](https://github.com/adib-alqurashi/prototypes).
-
-## Open it yourself
-
-Clone the repo and open the folder as an Obsidian vault. It uses the Minimal theme with Dataview, Tasks, Excalidraw, LaTeX Suite, PDF++ and Git.
