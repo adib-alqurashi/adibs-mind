@@ -1,7 +1,12 @@
 ---
 date: 2026-10-24
-summary: How a small language model is made from a large one, and what you give up: distillation, quantisation, and the quiet third ingredient, data.
-tags: [article, ml, llm, slm, draft]
+summary: "How a small language model is made from a large one, and what you give up: distillation, quantisation, and the quiet third ingredient, data."
+tags:
+  - article
+  - ml
+  - llm
+  - slm
+  - draft
 ---
 # Small models, distilled
 
