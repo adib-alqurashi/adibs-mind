@@ -2,28 +2,24 @@
 
 > A second brain for mathematics, code and machine learning, built in Obsidian and partly written by hand.
 
-This is where my learning lives: university courses, problems I've worked through, things I've built, and ideas I'm still chasing. Everything is plain Markdown, LaTeX and handwritten Excalidraw, so it stays readable anywhere and lasts.
+This is where my learning lives: the courses I take, the problems I work through, the articles I write, and the ideas I'm still chasing. Everything is plain Markdown, LaTeX and handwritten Excalidraw boards, so it stays readable anywhere and lasts.
 
 ## What's inside
 
 | | |
 |---|---|
-| [**University terms**](...) | KFUPM courses by term (e.g. `261`): syllabus, slides and practice |
-| [**Programming & Math**](...) | Where maths meets code: [LeetCode](...), worked problems in handwriting and LaTeX, programming notes, and shipped projects in [code-lab](...) |
-| [**Articles**](...) | Deep dives on topics I'm exploring |
-| [**3 System**](...) | The templates that keep it all consistent |
+| [**Articles**](<2 Create/Articles>) | Pieces I write on what I'm exploring, from the geometry behind least squares to how small language models are made |
+| [**University terms**](<2 Create/University terms>) | My KFUPM courses by term: syllabus, slides, practice, and the handwritten boards I fill in during lectures |
+| [**Programming & Math**](<2 Create/programming & math>) | Where the two meet: worked problems in handwriting and LaTeX, [LeetCode](<2 Create/programming & math/programming/LeetCode>) solutions, and notes on what I learn |
 
-My planner (tasks, schedule and study timer) lives in `1 Organize`. It's in the same vault on my machine, but stays private.
+My planner (tasks, schedule and study time) lives in the same vault on my machine, but stays private.
 
-## How notes are written
+## How I write
 
 - **Problems** follow one path: Problem → Idea → Solution → Takeaway. The solution is handwritten, LaTeX or code, whichever fits.
 - **Articles** get one note each, dated, with a one-line summary at the top.
-- **Images and drawings** sit in an `Attachments/` folder beside the note that uses them.
+- **Drawings** are done on a black board in Excalidraw, so they read the same in the dark as on paper.
 
-## Open it yourself
+## Elsewhere
 
-Clone the repo and open the folder as an Obsidian vault.
-
-**Theme:** Minimal
-**Plugins:** Dataview, Tasks, Excalidraw, LaTeX Suite, PDF++, Git, Minimal Theme Settings, plus Study Timer, a small plugin I wrote.
+The things I build with this knowledge live in [code-lab](https://github.com/adib-alqurashi/code-lab), and the small tools I build for the vault itself, like the study timer in the status bar, live in [prototypes](https://github.com/adib-alqurashi/prototypes).
