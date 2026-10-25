@@ -1,7 +1,8 @@
 ---
 date: 2026-10-24
-summary: Why "best fit" means "closest shadow", and why the eigenvalues of a data matrix tell you how much of the picture a smaller model keeps.
+summary: "Why best fit means closest shadow, and why the eigenvalues of a data matrix tell you how much of the picture a smaller model keeps."
 tags:
+  - article
   - math
   - linear-algebra
   - draft
