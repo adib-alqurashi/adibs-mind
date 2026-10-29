@@ -1,0 +1,11 @@
+/* Excalidraw: always use the normal arrow pointer, so it matches the system
+   pointer that appears when XP-Pen side buttons are pressed (no visible switching).
+   Excalidraw sets cursors inline, so !important is required. */
+.workspace-leaf-content[data-type="excalidraw"],
+.workspace-leaf-content[data-type="excalidraw"] *,
+.excalidraw,
+.excalidraw *,
+.excalidraw-wrapper,
+.excalidraw-wrapper * {
+  cursor: default !important;
+}

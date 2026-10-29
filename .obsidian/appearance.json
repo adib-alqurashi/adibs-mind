@@ -4,7 +4,8 @@
   "cssTheme": "",
   "enabledCssSnippets": [
     "claude-look",
-    "hide-drawing-svgs"
+    "hide-drawing-svgs",
+    "excalidraw-stylus-cursor"
   ],
   "textFontFamily": "Source Serif 4",
   "interfaceFontFamily": "Inter",
